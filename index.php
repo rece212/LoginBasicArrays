@@ -5,7 +5,6 @@
     $Password= Array("Cats","Ball","Dog");
     $Name = isset($_POST["username"])?$_POST["username"] :'';
     $Pass = isset($_POST["password"])?$_POST["password"] :'';
-
 ?>
 
 <!DOCTYPE html>
@@ -32,10 +31,10 @@
 
     <label> Username </label>
     <input type="username" required name="username"
-           placeholder="username"><br>
+           placeholder="username" value="<?php  echo isset($Name) ? $Name:'';?>"><br>
 
     <label>Password</label>
-    <input type="password" required name="password"  placeholder="password"><br>
+    <input type="password" required name="password"  value="<?php  echo isset($Pass) ? $Pass:'';?>" placeholder="password"><br>
 
     <!--Login Button-->
     <button name="login" type="Submit">Login</button>
